@@ -1,13 +1,17 @@
 file = open("data.txt", "r")
 
-playerMoves = []
+yourMoves = []
 oppMoves = []
 
-for l in file:
-    line = file.readline()
-    line = line.split(" ")
-    print(line)
-    oppMoves.append(line[0])
-    playerMoves.append(line[1])
+yourScore = 0
+oppScore = 0
 
-#print(playerMoves)
+for l in file:
+    line = l.split(" ")
+    oppMoves.append(line[0])
+    yourMoves.append(line[1][:1])
+
+
+def round(player, score):
+
+    return 0
