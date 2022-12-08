@@ -11,7 +11,21 @@ for l in file:
     oppMoves.append(line[0])
     yourMoves.append(line[1][:1])
 
+def changeValue(moves):
+    for idx, m in enumerate(moves):
+        if m == "A" or m == "X":
+            moves[idx] = "Rock"
+        elif m == "B" or m == "Y":
+            moves[idx] = "Scissors"
+        elif m == "C" or m == "Z":
+            moves[idx] = "Paper"
+    return moves
 
-def round(player, score):
+oppMoves = changeValue(oppMoves)
+yourMoves = changeValue(yourMoves)
 
-    return 0
+def playRound(playerMoves, scdPlayerMoves, score):
+    for idx, moves in playerMoves:
+        print(moves)
+
+#playRound(oppMoves, yourMoves, oppScore)
